@@ -148,7 +148,7 @@
                     <connections>
                         <outlet property="resetButton" destination="d4E-mR-wfO" id="dQs-SU-KXp"/>
                         <outlet property="resultImage" destination="TuP-tq-CTo" id="Qab-XK-DtK"/>
-                        <segue destination="SCu-hR-MMa" kind="unwind" identifier="unwindVC1" unwindAction="unwindVC1WithSegue:" id="jj8-FM-WwJ"/>
+                        <segue destination="SCu-hR-MMa" kind="unwind" identifier="unwindVC1" unwindAction="unwindVC1WithSegue:" id="QLF-2U-qUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2f-dX-KjM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

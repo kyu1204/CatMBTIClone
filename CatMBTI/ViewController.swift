@@ -229,6 +229,7 @@ class ViewController: UIViewController {
                     }
                 }
                 self.resultImageIndex = maxKey
+                qnaIndex = 0
                 performSegue(withIdentifier: "ResultView", sender: nil)
                 changeButtonLabel()
             }
