@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		9502EE0826EF9B7300EF2458 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		955DB8BE26F1AE100006D2A6 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
-		95FA0F5226EEE475005D7A66 /* CatMBTI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatMBTI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95FA0F5226EEE475005D7A66 /* 고양이MBTI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "고양이MBTI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FA0F5526EEE475005D7A66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95FA0F5726EEE475005D7A66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		95FA0F5926EEE475005D7A66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		95FA0F5326EEE475005D7A66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95FA0F5226EEE475005D7A66 /* CatMBTI.app */,
+				95FA0F5226EEE475005D7A66 /* 고양이MBTI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			);
 			name = CatMBTI;
 			productName = CatMBTI;
-			productReference = 95FA0F5226EEE475005D7A66 /* CatMBTI.app */;
+			productReference = 95FA0F5226EEE475005D7A66 /* 고양이MBTI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -306,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mint.CatMBTI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "고양이MBTI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -325,7 +325,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mint.CatMBTI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "고양이MBTI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

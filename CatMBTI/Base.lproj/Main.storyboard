@@ -26,42 +26,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatMBTI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="고양이MBTI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSs-9c-Upf">
-                                <rect key="frame" x="181" y="94" width="52" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSs-9c-Upf">
+                                <rect key="frame" x="30" y="139" width="354" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="A1w-RW-Nv2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.20370322556206677" green="0.20370322556206677" blue="0.20370322556206677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Uf-3L-yVp">
-                                <rect key="frame" x="180" y="170.5" width="54" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="30" y="259" width="354" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="UX1-qL-8GY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.20370322560000001" green="0.20370322560000001" blue="0.20370322560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="aOneButtonClickEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="uti-8x-RJc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwn-9k-g61">
-                                <rect key="frame" x="180" y="249.5" width="54" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="30" y="359" width="354" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Mmj-bW-oNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.20370322560000001" green="0.20370322560000001" blue="0.20370322560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="aTwoButtonClickEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YMF-AA-oBK"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.16" translatesAutoresizingMaskIntoConstraints="NO" id="KrD-qZ-J3f">
+                                <rect key="frame" x="30" y="94" width="354" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="O9m-MF-y7y"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93085305377257266" green="0.92966015200763086" blue="0.95049717450382731" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="LSs-9c-Upf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="2iI-OP-eK8"/>
+                            <constraint firstItem="3Uf-3L-yVp" firstAttribute="leading" secondItem="LSs-9c-Upf" secondAttribute="leading" id="7Xe-NO-ZkS"/>
+                            <constraint firstItem="LSs-9c-Upf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9GC-hD-igh"/>
                             <constraint firstItem="LSs-9c-Upf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cb5-uk-g8C"/>
-                            <constraint firstItem="Uwn-9k-g61" firstAttribute="top" secondItem="3Uf-3L-yVp" secondAttribute="bottom" constant="45" id="IO3-eJ-eFb"/>
+                            <constraint firstItem="Uwn-9k-g61" firstAttribute="top" secondItem="3Uf-3L-yVp" secondAttribute="bottom" constant="20" id="IO3-eJ-eFb"/>
+                            <constraint firstItem="Uwn-9k-g61" firstAttribute="leading" secondItem="3Uf-3L-yVp" secondAttribute="leading" id="LEm-rb-2mk"/>
+                            <constraint firstItem="KrD-qZ-J3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LaD-ZL-NVr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSs-9c-Upf" secondAttribute="trailing" constant="30" id="N4R-hM-QaN"/>
                             <constraint firstItem="Uwn-9k-g61" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TGN-hH-O9a"/>
-                            <constraint firstItem="3Uf-3L-yVp" firstAttribute="top" secondItem="LSs-9c-Upf" secondAttribute="bottom" constant="50" id="mAH-aV-tYe"/>
+                            <constraint firstItem="KrD-qZ-J3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="VEv-wN-km8"/>
+                            <constraint firstItem="LSs-9c-Upf" firstAttribute="top" secondItem="KrD-qZ-J3f" secondAttribute="bottom" constant="30" id="ZGT-96-iHJ"/>
+                            <constraint firstItem="KrD-qZ-J3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Za4-kb-tHd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KrD-qZ-J3f" secondAttribute="trailing" constant="30" id="bJv-uV-RB4"/>
+                            <constraint firstItem="3Uf-3L-yVp" firstAttribute="top" secondItem="LSs-9c-Upf" secondAttribute="bottom" constant="60" id="mAH-aV-tYe"/>
                             <constraint firstItem="3Uf-3L-yVp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVi-bF-Wg2"/>
                         </constraints>
                     </view>
@@ -70,17 +100,18 @@
                         <outlet property="aOneButton" destination="3Uf-3L-yVp" id="u2t-xz-PhY"/>
                         <outlet property="aTwoButton" destination="Uwn-9k-g61" id="9mI-3V-DeC"/>
                         <outlet property="qLabel" destination="LSs-9c-Upf" id="fDb-XI-poJ"/>
+                        <outlet property="testProgress" destination="KrD-qZ-J3f" id="9SE-Ch-flA"/>
                         <segue destination="nO0-Jq-RdJ" kind="show" identifier="ResultView" id="JPp-gI-yAC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="94"/>
+            <point key="canvasLocation" x="482.60869565217394" y="93.75"/>
         </scene>
         <!--Start View-->
         <scene sceneID="rFn-gD-1QG">
             <objects>
-                <viewController id="FwX-QR-bW9" customClass="StartView" customModule="CatMBTI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FwX-QR-bW9" customClass="StartView" customModule="고양이MBTI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vKp-B6-UAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +145,7 @@
         <!--Result View-->
         <scene sceneID="cc8-4B-qsS">
             <objects>
-                <viewController storyboardIdentifier="ResultView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nO0-Jq-RdJ" customClass="ResultView" customModule="CatMBTI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nO0-Jq-RdJ" customClass="ResultView" customModule="고양이MBTI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jPg-Iv-la5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +155,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4E-mR-wfO">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
-                                        <state key="normal" title="다시 대답하기"/>
+                                        <state key="normal" title="다시 시작하기"/>
                                         <connections>
                                             <action selector="resetButtonClick:" destination="nO0-Jq-RdJ" eventType="touchDown" id="wFJ-RD-QrQ"/>
                                         </connections>
@@ -161,6 +192,9 @@
         <image name="image-0" width="1500" height="2700"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

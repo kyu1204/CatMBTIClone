@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var qLabel: UILabel!
     @IBOutlet weak var aOneButton: UIButton!
+    @IBOutlet weak var testProgress: UIProgressView!
     @IBOutlet weak var aTwoButton: UIButton!
     
     var qnaIndex = 0
@@ -146,6 +147,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         qnaIndex = 0
+        
+        // 질문 label 스타일
+        qLabel.clipsToBounds = true
+        qLabel.layer.cornerRadius = 20
+        
+        // 답변 버튼 스타일
+        aOneButton.layer.cornerRadius = 20
+        aTwoButton.layer.cornerRadius = 20
+        
+        // 프로그레스바 스타일
+        testProgress.clipsToBounds = true
+        testProgress.progressTintColor = .darkGray
+        testProgress.layer.cornerRadius = 8
+        testProgress.layer.sublayers![1].cornerRadius = 8
+        testProgress.subviews[1].clipsToBounds = true
+        testProgress.progress = Float(qnaIndex + 1) / Float(12)
+        
+        // 라벨 변경 및 Fade In & Out 에니메이션
         changeButtonLabel()
     }
     
@@ -158,31 +177,28 @@ class ViewController: UIViewController {
     }
     
     func changeButtonLabel() {
+        testProgress.progress = Float(qnaIndex + 1) / Float(12)
         qLabel.alpha = 0
+        aOneButton.alpha = 0
+        aTwoButton.alpha = 0
         UIView.animate(withDuration: 1.0, animations: ({
             if let question = self.qnaList[self.qnaIndex]["q"] as? String{
                 self.qLabel.text = question
             }
-            self.qLabel.alpha = 1
-        }))
-        
-        aOneButton.alpha = 0
-        UIView.animate(withDuration: 1.0, animations: ({
+            
             let answerArray = self.qnaList[self.qnaIndex]["a"] as! Array<Dictionary<String, Any>>
             if let answer = answerArray[0]["answer"] as? String {
                 self.aOneButton.setTitle(answer, for: .normal)
             }
-            self.aOneButton.alpha = 1
-        }))
-        
-        aTwoButton.alpha = 0
-        UIView.animate(withDuration: 1.0, animations: ({
-            let answerArray = self.qnaList[self.qnaIndex]["a"] as! Array<Dictionary<String, Any>>
             if let answer = answerArray[1]["answer"] as? String {
                 self.aTwoButton.setTitle(answer, for: .normal)
             }
+
+            self.qLabel.alpha = 1
             self.aTwoButton.alpha = 1
+            self.aOneButton.alpha = 1
         }))
+        
     }
     @IBAction func aOneButtonClickEvent(_ sender: Any) {
         if qnaIndex <= 11 {
