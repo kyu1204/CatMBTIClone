@@ -85,7 +85,6 @@
                             <constraint firstItem="Uwn-9k-g61" firstAttribute="top" secondItem="3Uf-3L-yVp" secondAttribute="bottom" constant="20" id="IO3-eJ-eFb"/>
                             <constraint firstItem="Uwn-9k-g61" firstAttribute="leading" secondItem="3Uf-3L-yVp" secondAttribute="leading" id="LEm-rb-2mk"/>
                             <constraint firstItem="KrD-qZ-J3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LaD-ZL-NVr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSs-9c-Upf" secondAttribute="trailing" constant="30" id="N4R-hM-QaN"/>
                             <constraint firstItem="Uwn-9k-g61" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TGN-hH-O9a"/>
                             <constraint firstItem="KrD-qZ-J3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="VEv-wN-km8"/>
                             <constraint firstItem="LSs-9c-Upf" firstAttribute="top" secondItem="KrD-qZ-J3f" secondAttribute="bottom" constant="30" id="ZGT-96-iHJ"/>
@@ -117,24 +116,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brJ-6C-EBZ">
-                                <rect key="frame" x="138.5" y="424" width="137" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="테스트 시작"/>
+                                <rect key="frame" x="30" y="418" width="354" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9bG-mq-wKp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="테스트 시작">
+                                    <color key="titleColor" red="0.20370322560000001" green="0.20370322560000001" blue="0.20370322560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="startButtonClick:" destination="FwX-QR-bW9" eventType="touchUpInside" id="eKa-LM-sRs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MEQ-Gd-jwq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93085305380000005" green="0.92966015199999996" blue="0.95049717450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="brJ-6C-EBZ" firstAttribute="centerY" secondItem="vKp-B6-UAb" secondAttribute="centerY" id="dm7-zC-X35"/>
+                            <constraint firstItem="brJ-6C-EBZ" firstAttribute="leading" secondItem="MEQ-Gd-jwq" secondAttribute="leading" constant="30" id="f0h-t1-j5E"/>
                             <constraint firstItem="brJ-6C-EBZ" firstAttribute="centerX" secondItem="vKp-B6-UAb" secondAttribute="centerX" id="phM-iQ-nzX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KjR-yq-20y"/>
                     <connections>
-                        <outlet property="startButton" destination="brJ-6C-EBZ" id="XCR-Or-w2S"/>
+                        <outlet property="startButton" destination="brJ-6C-EBZ" id="tC8-73-SOz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="StartSegue" id="fbO-DR-5ae"/>
                     </connections>
                 </viewController>
@@ -150,45 +156,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V4d-Mj-Ep6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="image-0" translatesAutoresizingMaskIntoConstraints="NO" id="TuP-tq-CTo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="846"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0MI-Fp-ZnG">
+                                <rect key="frame" x="30" y="820" width="354" height="32"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4E-mR-wfO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
-                                        <state key="normal" title="다시 시작하기"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oo-1T-631">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="32"/>
+                                        <color key="backgroundColor" red="0.93085305380000005" green="0.92966015199999996" blue="0.95049717450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="다시 시작하기">
+                                            <color key="titleColor" red="0.20370322560000001" green="0.20370322560000001" blue="0.20370322560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
-                                            <action selector="resetButtonClick:" destination="nO0-Jq-RdJ" eventType="touchDown" id="wFJ-RD-QrQ"/>
+                                            <action selector="resetButtonClick:" destination="nO0-Jq-RdJ" eventType="touchUpInside" id="kvN-sW-6gH"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="image-0" translatesAutoresizingMaskIntoConstraints="NO" id="TuP-tq-CTo">
-                                        <rect key="frame" x="0.0" y="30" width="414" height="822"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhB-IM-h0C" userLabel="Share Button">
+                                        <rect key="frame" x="187" y="0.0" width="167" height="32"/>
+                                        <color key="backgroundColor" red="0.93085305380000005" green="0.92966015199999996" blue="0.95049717450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="공유하기" image="arrowshape.turn.up.right.circle.fill" catalog="system">
+                                            <color key="titleColor" red="0.20370322560000001" green="0.20370322560000001" blue="0.20370322560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButtonClick:" destination="nO0-Jq-RdJ" eventType="touchUpInside" id="31t-Sd-Cuy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cyt-1l-k9X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V4d-Mj-Ep6" firstAttribute="leading" secondItem="cyt-1l-k9X" secondAttribute="leading" id="6H6-5K-e37"/>
-                            <constraint firstAttribute="trailing" secondItem="V4d-Mj-Ep6" secondAttribute="trailing" id="OZd-t2-o6H"/>
-                            <constraint firstAttribute="bottom" secondItem="V4d-Mj-Ep6" secondAttribute="bottom" id="QdJ-x1-k15"/>
-                            <constraint firstItem="V4d-Mj-Ep6" firstAttribute="top" secondItem="cyt-1l-k9X" secondAttribute="top" id="hWS-Oi-oEs"/>
+                            <constraint firstItem="cyt-1l-k9X" firstAttribute="trailing" secondItem="0MI-Fp-ZnG" secondAttribute="trailing" constant="30" id="4c7-nZ-ztz"/>
+                            <constraint firstItem="TuP-tq-CTo" firstAttribute="leading" secondItem="cyt-1l-k9X" secondAttribute="leading" id="6Ex-pu-QoK"/>
+                            <constraint firstAttribute="bottom" secondItem="TuP-tq-CTo" secondAttribute="bottom" constant="50" id="9Wn-7k-mi8"/>
+                            <constraint firstItem="cyt-1l-k9X" firstAttribute="bottom" secondItem="0MI-Fp-ZnG" secondAttribute="bottom" constant="10" id="D2a-my-Fgk"/>
+                            <constraint firstItem="TuP-tq-CTo" firstAttribute="trailing" secondItem="cyt-1l-k9X" secondAttribute="trailing" id="GGW-Ho-DPW"/>
+                            <constraint firstItem="0MI-Fp-ZnG" firstAttribute="leading" secondItem="cyt-1l-k9X" secondAttribute="leading" constant="30" id="aFn-k7-Qmb"/>
+                            <constraint firstItem="TuP-tq-CTo" firstAttribute="top" secondItem="jPg-Iv-la5" secondAttribute="top" id="hip-WQ-0N4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YcQ-yH-gaz"/>
                     <connections>
-                        <outlet property="resetButton" destination="d4E-mR-wfO" id="dQs-SU-KXp"/>
+                        <outlet property="resetButton" destination="2oo-1T-631" id="SD8-5o-lU1"/>
                         <outlet property="resultImage" destination="TuP-tq-CTo" id="Qab-XK-DtK"/>
+                        <outlet property="shareButton" destination="qhB-IM-h0C" id="FpY-MC-gZH"/>
                         <segue destination="SCu-hR-MMa" kind="unwind" identifier="unwindVC1" unwindAction="unwindVC1WithSegue:" id="QLF-2U-qUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2f-dX-KjM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="SCu-hR-MMa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="94"/>
+            <point key="canvasLocation" x="1342.0289855072465" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="image-0" width="1500" height="2700"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

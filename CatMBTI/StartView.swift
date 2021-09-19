@@ -16,6 +16,7 @@ class StartView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startButton.layer.cornerRadius = 20
         
     }
     @IBAction func startButtonClick(_ sender: Any) {
